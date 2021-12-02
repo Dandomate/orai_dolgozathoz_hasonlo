@@ -42,7 +42,7 @@ connection.connect((err) => {
         }
     
     });
-    const myQuery3 = "SELECT SUM(ertek) AS ertek1 FROM `eladas` where ertek < 0;";
+    const myQuery3 = "SELECT SUM(ertek*-1) AS ertek1 FROM `eladas` where ertek < 0;";
     connection.query(myQuery3, (err, result, fields) => {
         if (err) throw err;
 
